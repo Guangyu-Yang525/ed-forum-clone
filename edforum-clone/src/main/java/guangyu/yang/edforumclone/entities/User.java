@@ -1,5 +1,6 @@
 package guangyu.yang.edforumclone.entities;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -26,6 +27,7 @@ public class User {
     @NotBlank(message = "password cannot be empty")
     private String password;
     @Email
+    @Column(unique = true)
     @NotEmpty(message = "email address is invalid")
     private String email;
     private Boolean staff;
