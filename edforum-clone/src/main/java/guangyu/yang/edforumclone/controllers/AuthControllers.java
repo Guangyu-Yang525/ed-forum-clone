@@ -26,4 +26,8 @@ public class AuthControllers {
         return new ResponseEntity<>("Created User", HttpStatus.OK);
     }
 
+    @PostMapping(value="/login")
+    public ResponseEntity<String> login(@RequestBody RegisterRequest request) {
+        return new ResponseEntity<>("Created User", HttpStatus.OK);
+    }
 }
